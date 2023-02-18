@@ -10,5 +10,9 @@ int main(){
     */
 
     printf("Hello world\n");
-    printf("Tetando quebra\nde linha");
+    printf("Tetando quebra\nde linha\n");
+
+    int numero = 7;
+
+    printf("Adoro o numero %d", numero);
 }
