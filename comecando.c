@@ -17,7 +17,12 @@ int main(){
 
     // printf("Adoro o numero %d", numero);
 
-    printf("Qual o numero que pensei?: ");
-    scanf("%d", &chute);    // é obrigatório aquele '&' para ler entrada de usuários | scanf é para ler do teclado
-    printf("Seu chute foi: %d", chute);
+    printf("Digite seu chute: ");
+    scanf("%d", &chute);
+
+    if(chute == numero){
+        printf("Parabens, voce acertou o numero: %d!", numero);
+    }else{
+        printf("Nao foi desssa vez, mas continue tentando!!!");
+    }
 }
