@@ -13,7 +13,6 @@ nomes de constantes são geralmente feitas em maiúsculo
 int main(){
     int numero = 7;
     int chute;
-    int acertou = (chute == numero);
 
     printf("Bem-vindo ao jogo de adivinhacao\n");
 
@@ -22,14 +21,17 @@ int main(){
         printf("Digite seu chute: ");
         scanf("%d", &chute);
 
+        int acertou = (chute == numero); // esse tipo de variável deve vir após o scanf, senão quebra o código
+        int maior = (chute > numero);    // pois não dá para comparar o número antes do scanf, pois não tem nada nele
+
         if(acertou){
-            printf("Parabens, voce acertou o numero: %d!", numero);
+            printf("Parabens, voce acertou o numero: %d!\n", numero);
             break;
         }else{
-            if(chute < numero){
-                printf("Tente mais alto\n");
-            }else{
+            if(maior){
                 printf("Tente mais baixo\n");
+            }else{
+                printf("Tente mais alto\n");
             }
         }
     }
