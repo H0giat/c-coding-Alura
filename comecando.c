@@ -24,7 +24,7 @@ int main(){
         int acertou = (chute == numero); // esse tipo de variável deve vir após o scanf, senão quebra o código
         int maior = (chute > numero);    // pois não dá para comparar o número antes do scanf, pois não tem nada nele
 
-        if(acertou){
+        if(acertou){    // é declarado como int, pois retorna como 1(verdadeiro) e 0(falso)
             printf("Parabens, voce acertou o numero: %d!\n", numero);
             break;
         }else{
