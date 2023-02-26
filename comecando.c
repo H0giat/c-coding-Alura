@@ -1,15 +1,24 @@
 #include <stdio.h>
 
+// a hashtag (#) é usada para indicar diretivas
+
+#define NUMERO_TENTATIVAS 5
+
+/*
+nomes de constantes são geralmente feitas em maiúsculo
+( underscore / underline / _ ) são usadas para separar palavras na mesma variável, como mostrado acima
+*/
+
+
 int main(){
     int numero = 7;
     int chute;
     int acertou = (chute == numero);
-    int numero_tentativas = 3;
 
     printf("Bem-vindo ao jogo de adivinhacao\n");
 
-    for(int i = 1; i <= numero_tentativas; i++){
-        printf("Tentativa %d de 3\n", i);
+    for(int i = 1; i <= NUMERO_TENTATIVAS; i++){
+        printf("Tentativa %d de %d\n", i, NUMERO_TENTATIVAS);
         printf("Digite seu chute: ");
         scanf("%d", &chute);
 
@@ -24,4 +33,5 @@ int main(){
             }
         }
     }
+    printf("Fim de jogo!");
 }
