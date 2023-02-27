@@ -26,7 +26,6 @@ int main(){
             i--; // parte do código que mantém a tentativa na rodada atual, sem perder chances
             continue; // ele faz o loop continuar, mas sem executar o resto do bloco e sem matar o loop
         }
-        
 
         int acertou = (chute == numero); // esse tipo de variável deve vir após o scanf, senão quebra o código
         int maior = (chute > numero);    // pois não dá para comparar o número antes do scanf, pois não tem nada nele
@@ -40,8 +39,6 @@ int main(){
         }else{
             printf("Tente mais alto\n");
         }
-        
-        
     }
     printf("Fim de jogo!");
 }
