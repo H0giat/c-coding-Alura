@@ -21,29 +21,23 @@ int main(){
         printf("Digite seu chute: ");
         scanf("%d", &chute);
 
+        if (chute < 0){
+            printf("Numeros negativos sao invalidos!");
+            i--; // parte do código que mantém a tentativa na rodada atual, sem perder chances
+            continue; // ele faz o loop continuar, mas sem executar o resto do bloco e sem matar o loop
+        }
+        
+
         int acertou = (chute == numero); // esse tipo de variável deve vir após o scanf, senão quebra o código
         int maior = (chute > numero);    // pois não dá para comparar o número antes do scanf, pois não tem nada nele
-        int menor = (chute < numero);
-
-        /*
-        if(acertou){    // é declarado como int, pois retorna como 1(verdadeiro) e 0(falso)
-            printf("Parabens, voce acertou o numero: %d!\n", numero);
-            break;
-        }else{
-            if(maior){
-                printf("Tente mais baixo\n");
-            }else{
-                printf("Tente mais alto\n");
-            }
-        }
-        */
+        // int menor = (chute < numero);
 
         if(acertou){
             printf("Parabens, voce acertou o numero: %d!\n", numero);
             break;
         }else if(maior){   // se esse 'else if' for verdadeiro, o programa não precisa verificar se a outra condição também é verdadeira ou não, ela para aqui
             printf("Tente mais baixo\n");
-        }else if (menor){
+        }else{
             printf("Tente mais alto\n");
         }
         
