@@ -22,7 +22,7 @@ int main(){
         scanf("%d", &chute);
 
         if (chute < 0){
-            printf("Numeros negativos sao invalidos!");
+            printf("Numeros negativos sao invalidos!\n");
             i--; // parte do código que mantém a tentativa na rodada atual, sem perder chances
             continue; // ele faz o loop continuar, mas sem executar o resto do bloco e sem matar o loop
         }
