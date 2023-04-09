@@ -32,6 +32,7 @@ int main(){
             printf("Tente mais alto\n");
         }
     }
-    printf("Fim de jogo!");
+    
+    printf("Fim de jogo!\n");
     printf("Parabens, voce ganhou o jogo com %d tentativas!\n", tentativa - 1);
 }
