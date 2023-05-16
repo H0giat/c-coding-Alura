@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>        // adicina biblioteca para funções, como abs() que retorna o número absoluto de uma variável ou o próprio número
+#include <time.h>          // adiciona biblioteca para mudar a semente do método rand
 
 int main(){
-    int numero = 7;
+    int segundos = time(0);
+    srand(segundos);                // gera uma semente diferente para aleatoriezar um número
+    int numerogrande = rand();      // função para gerar um número aleatório
+    int numero = numerogrande % 100;
     int chute;
     int ganhou = 0;
     int tentativa = 1;
