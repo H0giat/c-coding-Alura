@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>        // adicina biblioteca para funções, como abs() que retorna o número absoluto de uma variável ou o próprio número
-#include <time.h>          // adiciona biblioteca para mudar a semente do método rand
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
     int segundos = time(0);
-    srand(segundos);                // gera uma semente diferente para aleatoriezar um número
-    int numerogrande = rand();      // função para gerar um número aleatório
+    srand(segundos);
+    int numerogrande = rand();
     int numero = numerogrande % 100;
     int chute;
     int ganhou = 0;
@@ -19,7 +19,7 @@ int main(){
         printf("Tentativa %d\n", tentativa);
         printf("Digite seu chute: ");
         scanf("%d", &chute);
-        tentativa = tentativa + 1;    // ou tentativa++; -> sempre adiciona 1
+        tentativa = tentativa + 1;
 
         if (chute < 0){
             printf("Numeros negativos sao invalidos!\n");
@@ -31,7 +31,6 @@ int main(){
 
         if(acertou){
             printf("Parabens, voce acertou o numero: %d!\n", numero);
-            // break;
             ganhou = 1;
         }else if(maior){   
             printf("Tente mais baixo\n");
