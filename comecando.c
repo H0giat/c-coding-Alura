@@ -10,6 +10,8 @@ int main(){
     int chute;
     int ganhou = 0;
     int tentativa = 1;
+    int pontos = 1000;
+    int pontuacao;
 
     printf("Bem-vindo ao jogo de adivinhacao\n");
 
@@ -36,8 +38,11 @@ int main(){
         }else{
             printf("Tente mais alto\n");
         }
+
+        pontuacao = abs((chute / 2) - pontos);
     }
     
     printf("Fim de jogo!\n");
     printf("Parabens, voce ganhou o jogo com %d tentativas!\n", tentativa - 1);
+    printf("Sua pontuacao foi: %d", pontuacao);
 }
