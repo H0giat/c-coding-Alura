@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
-A pontuação não funciona direto com switch
-precisa de aprimoramento
-*/
-
 int main(){
     int segundos = time(0);
     srand(segundos);
@@ -15,8 +10,8 @@ int main(){
     int chute;
     int ganhou = 0;
     int tentativa = 1;
-    // int pontos = 1000;
-    // int pontuacao;
+    int pontos = 1000;
+    int pontuacao;
     int num_tentativas;
     int nivel;
 
@@ -25,8 +20,8 @@ int main(){
     printf("Selecione a dificuldade:\n(1)Facil (2)Medio (3)Dificil\n");
     scanf("%d", &nivel);
 
-    switch (nivel){            // o break está em cada caso, pois se não estivesse, ele executaria as outras codições também
-        case 1:                // se o 1 fosse escolhido, ele excutaria até e default e assim por diante
+    switch (nivel){
+        case 1:
             num_tentativas = 20;
             break;
         case 2:
@@ -53,17 +48,16 @@ int main(){
 
         if(acertou){
             printf("Parabens, voce acertou o numero: %d!\n", numero);
-            ganhou = 1;
+            break;
         }else if(maior){   
             printf("Tente mais baixo\n");
         }else{
             printf("Tente mais alto\n");
         }
 
-        // pontuacao = abs((chute / 2) - pontos);
+        pontuacao = abs((chute / 2) - pontos);
     }
-    
     printf("Fim de jogo!\n");
-    printf("Parabens, voce ganhou o jogo com %d tentativas!\n", tentativa - 1);
-    // printf("Sua pontuacao foi: %d", pontuacao);
+    printf("Tentativas: %d\n", tentativa - 1);
+    printf("Sua pontuacao foi: %d", pontuacao);
 }
