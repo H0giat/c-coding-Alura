@@ -12,10 +12,27 @@ int main(){
     int tentativa = 1;
     int pontos = 1000;
     int pontuacao;
+    int num_tentativas;
+    int nivel;
 
     printf("Bem-vindo ao jogo de adivinhacao\n");
 
-    while(ganhou == 0){
+    printf("Selecione a dificuldade:\n(1)Facil (2)Medio (3)Dificil\n");
+    scanf("%d", &nivel);
+
+    switch (nivel){            // o break está em cada caso, pois se não estivesse, ele executaria as outras codições também
+        case 1:                // se o 1 fosse escolhido, ele excutaria até e default e assim por diante
+            num_tentativas = 20;
+            break;
+        case 2:
+            num_tentativas = 15;
+            break;
+        default:
+            num_tentativas = 5;
+            break;
+    }
+
+    for(int i = 1; i <= num_tentativas; i++){
         printf("Tentativa %d\n", tentativa);
         printf("Digite seu chute: ");
         scanf("%d", &chute);
