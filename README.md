@@ -1,2 +1,2 @@
 # c-coding-Alura
-Aprendendo C na Alura
+Jogo de adivinhação em C
