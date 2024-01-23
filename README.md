@@ -1,2 +1,2 @@
-# c-coding-Alura
-Jogo de adivinhação em C
+# Adivinhe
+Jogo de adivinhação simples em C
